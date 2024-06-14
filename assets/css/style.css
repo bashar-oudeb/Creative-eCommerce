@@ -325,6 +325,14 @@ body{
   padding-inline: 12px;
   border-radius: var(--radius-3);
 }
+
+.flex-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -618,15 +626,63 @@ body{
 /*-----------------------------------*\
   #BANNER
 \*-----------------------------------*/
+.banner .hover\:shine .has-bg-image {
+  z-index: -1;
+}
 
+.banner-list{
+  display: grid;
+  gap: 30px;
+}
+.banner-card{
+  min-height: 420px;
+  padding: 30px;
+}
+.banner-card .card-subtitle{
+  color: var(--black);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
+.banner-card :is(.card-title, .card-subtitle){
+  text-shadow: 0 0 2px var(--cultured-2);
+}
 
+.banner-card .card-title{
+  margin-block: 10px 30px;
+}
+
+.banner-card .card-text{
+  color: var(--black);
+  font-size: var(--fs-7);
+  margin-block: 10px 25px;
+}
 
 
 /*-----------------------------------*\
   #FEATURE
 \*-----------------------------------*/
 
+.feature{
+  text-align: center;
+}
+.feature .section-title{
+  margin-block-end: 40px;
+}
+.feature-card .card-icon{
+  width: 100px;
+  margin-inline: auto;
+}
+
+.feature-card .card-title{
+  margin-block: 35px 15px;
+}
+
+.feature-card .card-text{
+  font-size: var(--fs-7);
+}
 
 
 
