@@ -248,7 +248,7 @@ body{
 .has-after,
 .has-before {
   position: relative;
-  padding-block-end: 80px;
+
 }
 
 .has-after::after,
@@ -332,6 +332,10 @@ body{
   justify-content: center;
   align-items: center;
   gap: 30px;
+}
+
+.w-100{
+  width: 100%;
 }
 /*-----------------------------------*\
   #HEADER
@@ -691,22 +695,125 @@ body{
   #OFFER
 \*-----------------------------------*/
 
+.offer-banner{
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  align-items: center;
+  gap: 30px;
+  margin-block-end: 60px;
+}
 
+.offer-subtitle{
+  font-style: var(--fs-7);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.offer-subtitle .span{
+  color: var(--black);
+  text-transform: uppercase;
+  font-weight: var(--fw-700);
+  letter-spacing: 2px;
+  font-size: var(--fs-7);
+}
+.offer .badge{
+  font-weight: var(--fw-500);
+}
+.offer .section-title{ 
+  margin-block:  20px 8px ;
+}
 
+.offer .section-text {
+  font-size: var(--fs-6);
+}
 
+.offer .countdown{
+  color: var(--gray-web);
+  font-size: var(--fs-1);
+  line-height: 1;
+  display: flex;
+  margin-block: 20px 40px;
+}
+
+.offer .time:not(:last-child)::after{
+  content: ':';
+  color: var(--black);
+  font-size: 3rem;
+  font-weight: var(--fw-500);
+  margin-inline: 10px;
+}
+
+.offer .time{
+  display: flex;
+  align-items: center;
+}
 
 /*-----------------------------------*\
   #BLOG
 \*-----------------------------------*/
 
+.blog{
+  padding-block-end: calc(var(--section-padding) * 2);
+}
+.blog .section-title{
+  text-align: center;
+  margin-block-end: 40px;
+}
 
 
+.blog-card .card-banner img {
+  transition: var(--transition-2);
+}
+.blog-card:is(:hover , :focus-within) .card-banner img {
+  transform: scale(1.2);
+}
+
+.blog-card .card-title{
+  text-align: center;
+  margin-block: 30px 20px;
+  transition: var(--transition-1);
+}
+.blog-card .btn-link{
+  justify-content: center;
+}
 
 
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
 
+.footer .logo{
+  display: none;
+}
+
+.footer{
+  background-color: var(--cultured-1);
+  padding-block: 70px;
+}
+
+.footer-top{
+  display: grid;
+  gap: 40px;
+  margin-block-end: 60px;
+}
+.footer-list-title{
+  color: var(--black);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-600);
+}
+
+.footer-link ,
+.footer-link .link{
+  font-style: var(--fs-7);
+  color: var(--gray-web);
+  transition: var(--transition-1);
+}
+
+
+.footer-link:is(:hover, :focus){
+  margin-bottom: 2px;
+  text-decoration: underline;
+}
 
 
 
