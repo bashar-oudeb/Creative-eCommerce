@@ -24,10 +24,16 @@ Array.from(navLinks).forEach(link => {
 // header sticky
 
 const header = document.getElementById('header_sticky');
+const btnTop = document.getElementById('top_btn');
 
 const headerActive = () => {
-    window.scrollY > 150 ? header.classList.add('active') : header.classList.remove('active');
-};
+    if (window.scrollY > 150) {
+        header.classList.add('active');
+        btnTop.classList.add('active');
+    } else {
+        header.classList.remove('active');
+        btnTop.classList.remove('active');
+    }};
 
 window.addEventListener('scroll', headerActive);
 
@@ -39,6 +45,26 @@ const headerSticky = () => {
 };
 
 window.addEventListener('scroll', headerSticky);
+
+
+
+
+
+
+
+
+const sr = ScrollReveal({
+    origin : 'top',
+    distance : '60px',
+    duration : 2500,
+    delay: 300,
+})
+
+sr.reveal(`.alert, .logo, .feature, .blog,  .footer`)
+sr.reveal(`.hero , .shop , .offer`, {origin : 'bottom'})
+sr.reveal(`.input-wrapper, .navbar, .collection-list `, {origin : 'left', duration:3000, delay: 400})
+sr.reveal(`.header-actions, .banner `, {origin : 'right'})
+
 
 
 
