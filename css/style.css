@@ -170,10 +170,12 @@ body{
 \*-----------------------------------*/
 .container{
   padding-inline: 15px;
+  margin: 0 auto;
 }
 
 .section{
   padding-block: var(--section-padding);
+  margin: 0 auto;
 }
 .has-bg-image{
   background-repeat: no-repeat;
@@ -1026,7 +1028,9 @@ body{
     --section-padding: 50px
   }
 
-  .container{ max-width: 960px;}
+  .container{ 
+    max-width: 960px;
+    margin: 0 auto;}
   .scrollbar-item{
     min-width: calc(33.33% - 20px);
   }
@@ -1069,6 +1073,7 @@ body{
 @media (min-width: 1200px){
   .container{
     max-width: 1300px;
+    margin: 0 auto;
   }
   .scrollbar-item{
     min-width: calc(20% - 24px);
